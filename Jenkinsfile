@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        localMaven 'Maven 3.6.3'
+        maven 'apache-maven-2.3'
     }
     stages {
         stage('Build Application') {
