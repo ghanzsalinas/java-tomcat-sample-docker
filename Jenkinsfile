@@ -1,9 +1,12 @@
 pipeline {
     agent any
+    tools {
+        maven 'Maven 3.6.3'
+    }
     stages {
         stage('Build Application') {
             steps {
-                sh 'mvn pom.xml clean package'
+                sh 'mvn -f pom.xml clean package'
             }
             post {
                 success {
